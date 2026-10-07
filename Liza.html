@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Всё о Лизе Симпсон</title>
+    
+    <!-- Иконка Лизы во вкладке -->
+    <link rel="icon" type="image/jpeg" href="./icon/liza.jpg">
+    
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./lizaIMG/fon.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: "Impact", sans-serif;
+            color: #fff;
+            overflow: hidden; 
+        }
+
+        .liza-page {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Кнопка возврата на главную */
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #00ff00;
+            color: #000;
+            padding: 10px 20px;
+            font-size: 20px;
+            text-decoration: none;
+            border: 4px dashed #ff00ff;
+            font-weight: bold;
+            z-index: 100; 
+            transition: transform 0.2s;
+        }
+        .back-btn:hover {
+            transform: scale(1.2) rotate(5deg);
+            background-color: #ff00ff;
+            color: #fff;
+        }
+
+        /* Заголовок страницы */
+        .main-title {
+            font-size: 55px;
+            text-shadow: 5px 5px 0px #000, -3px -3px 0px #ff00ff;
+            text-align: center;
+            padding-top: 30px;
+            margin: 0;
+            z-index: 90;
+            position: relative;
+        }
+
+        /* Блок биографии СТРОГО в центре — сюда картинки больше не полезут */
+        .bio-box {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.85);
+            border: 5px dashed #ff00ff;
+            padding: 25px;
+            width: 450px;
+            text-align: center;
+            box-shadow: 0 0 25px #ff00ff;
+            z-index: 85;
+        }
+
+        .bio-title {
+            font-size: 35px;
+            color: #ff00ff;
+            margin-top: 0;
+        }
+
+        .bio-text {
+            font-size: 22px;
+            line-height: 1.5;
+            color: #ffff00;
+        }
+
+        /* ЗОНЫ ДЛЯ КАРТИНОК ПО БОКАМ */
+        .side-container {
+            position: absolute;
+            top: 120px;
+            bottom: 20px;
+            width: 320px; /* Ширина боковых колонок */
+            display: grid;
+            grid-template-rows: repeat(3, 1fr); /* Делит бок на 3 отдельные зоны, файлы не слипнутся */
+            gap: 10px;
+            z-index: 10;
+        }
+
+        /* Левая колонка */
+        #left-side {
+            left: 30px;
+        }
+
+        /* Правая колонка */
+        #right-side {
+            right: 30px;
+        }
+
+        /* КЛАСС ДЛЯ БОЛЬШИХ КАРТИНОК ЛИЗЫ */
+        .liza-grid-img {
+            width: 280px;  /* СДЕЛАЛИ КАРТИНКИ КРУПНЫМИ */
+            height: 200px;
+            object-fit: contain; /* Полностью вмещаются, не режутся */
+            background-color: rgba(0, 0, 0, 0.5); 
+            border: 5px solid #ffff00;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.8);
+            justify-self: center;
+            align-self: center;
+            transition: transform 0.3s ease;
+        }
+
+        /* Эффект безумного раздувания при наведении */
+        .liza-grid-img:hover {
+            transform: scale(1.4) rotate(15deg) !important;
+            z-index: 95;
+            border-color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="liza-page">
+        <!-- Кнопка назад -->
+        <a href="index.html" class="back-btn">⬅ НА ГЛАВНУЮ</a>
+
+        <!-- Заголовок -->
+        <h1 class="main-title">ЛИЗА СИМПСОН — МОЗГ ЭТОГО САЙТА!</h1>
+
+        <!-- ДВА КОНТЕЙНЕРА ПО БОКАМ ДЛЯ СЛУЧАЙНЫХ КАРТИНОК -->
+        <div id="left-side" class="side-container"></div>
+        <div id="right-side" class="side-container"></div>
+
+        <!-- Описание посередине страницы -->
+        <div class="bio-box">
+            <h2 class="bio-title">ЛИЧНОЕ ДЕЛО №4</h2>
+            <p class="bio-text">
+                Лиза Симпсон — круглая отличница, вегетарианка, защитница экологии и 
+                профессиональная саксофонистка Спрингфилда! <br><br>
+                Она слишком умная для этого безумного трэш-сайта, поэтому её фотографии 
+                в панике разлетаются по бокам экрана каждый раз, когда Евгений Белевитин обновляет страницу!
+            </p>
+        </div>
+    </div>
+
+    <!-- УМНЫЙ JS: РАНДОМИТ ТОЛЬКО ПО БОКАМ И КРУТИТ КАРТИНКИ -->
+    <script>
+        // Все твои файлы из папки lizaIMG
+        const lizaImages = [
+            './lizaIMG/3rr.jpg',
+            './lizaIMG/200px-Mona-Lisa-Simpson.png',
+            './lizaIMG/444.jpg',
+            './lizaIMG/aadsdsa.jpg',
+            './lizaIMG/fds.png'
+        ];
+
+        const leftSide = document.getElementById('left-side');
+        const rightSide = document.getElementById('right-side');
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        // Перебираем картинки
+        lizaImages.forEach((imgSrc, index) => {
+            const img = document.createElement('img');
+            img.src = imgSrc;
+            img.classList.add('liza-grid-img');
+
+            // Задаем случайный наклон для трэш-эффекта
+            const randomRotate = getRandomInt(-20, 20);
+            
+            // Небольшой случайный сдвиг влево-вправо/вверх-вниз внутри своей ячейки, чтобы было живее
+            const randomX = getRandomInt(-15, 15);
+            const randomY = getRandomInt(-15, 15);
+            img.style.transform = `translate(${randomX}px, ${randomY}px) rotate(${randomRotate}deg)`;
+
+            // Делим картинки: четные бросаем налево, нечетные — направо
+            if (index % 2 === 0) {
+                leftSide.appendChild(img);
+            } else {
+                rightSide.appendChild(img);
+            }
+        });
+    </script>
+
+</body>
+</html>

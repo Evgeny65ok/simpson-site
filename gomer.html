@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Всё о Гомере Симпсоне</title>
+    <link rel="icon" type="image/webp" href="./icon/gomer.webp">
+
+    <!-- ВСЕ СТИЛИ ДЕЛАЕМ ПРЯМО ТУТ ВНУТРИ HTML -->
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            /* Подключаем твой фон из папки gomer и жестко его растягиваем */
+            background-image: url('./gomer/fon.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Фон не будет двигаться при прокрутке */
+            font-family: "Impact", sans-serif;
+            color: #fff;
+        }
+
+        /* Главный трэш-контейнер страницы */
+        .gomer-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        /* Кнопка возврата на главную */
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #ff00ff;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 20px;
+            text-decoration: none;
+            border: 4px dashed #00ffff;
+            text-shadow: 2px 2px 0 #000;
+            transition: transform 0.2s;
+        }
+        .back-btn:hover {
+            transform: scale(1.2) rotate(-5deg);
+            background-color: #00ff00;
+        }
+
+        /* Заголовок страницы */
+        .main-title {
+            font-size: 60px;
+            text-shadow: 5px 5px 0px #ff0000, -3px -3px 0px #000;
+            margin-bottom: 40px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        /* Блок с фотками Гомера */
+        .photo-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap; /* Чтобы на мелких экранах фотки вставали друг под друга */
+        }
+
+        /* Стили для фоток Гомера (их смачно косит) */
+        .gomer-img {
+            width: 300px;
+            height: 250px;
+            object-fit: cover; /* Можно убрать, если хочешь чтобы их сплющило! */
+            border: 6px solid #ffff00;
+            box-shadow: 10px 10px 0px #ff00ff;
+            transition: transform 0.3s;
+        }
+        /* Фотки дико крутятся при наведении */
+        .gomer-img:hover {
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        /* Блок с биографией */
+        .bio-box {
+            background-color: rgba(0, 0, 0, 0.85); /* Полупрозрачный черный фон для читаемости */
+            border: 5px dashed #00ff00;
+            padding: 30px;
+            max-width: 700px;
+            text-align: center;
+            box-shadow: 0 0 20px #00ff00;
+        }
+
+        .bio-title {
+            font-size: 35px;
+            color: #ffff00;
+            margin-top: 0;
+            text-shadow: 2px 2px 0 #000;
+        }
+
+        .bio-text {
+            font-size: 22px;
+            line-height: 1.6;
+            color: #00ffff;
+            text-shadow: 1px 1px 0 #000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="gomer-page">
+        <!-- Кнопка, чтобы вернуться назад на главную -->
+        <a href="index.html" class="back-btn">⬅ НА ГЛАВНУЮ</a>
+
+        <!-- Огромный заголовок -->
+        <h1 class="main-title">ВЕЛИКИЙ ГОМЕР СИМПСОН!</h1>
+
+        <!-- Две фотки персонажа из твоей папки gomer -->
+        <div class="photo-container">
+            <img src="./gomer/250px-Evolution_of_Homer.jpg" alt="Эволюция Гомера" class="gomer-img">
+            <img src="./gomer/dddd.jpg" alt="Гомер трэш" class="gomer-img">
+        </div>
+
+        <!-- Краткая безумная биография -->
+        <div class="bio-box">
+            <h2 class="bio-title">СЕКРЕТНОЕ ДОСЬЕ</h2>
+            <p class="bio-text">
+                Гомер Сну Симпсон — легендарный инспектор по безопасности на Спрингфилдской АЭС, 
+                главный эксперт по поеданию пончиков и профессиональный лежатель на диване! <br><br>
+                Его жизненное кредо: "Д'оу!". Обожает пиво Duff, ненавидит работать и 
+                является лучшим другом Евгения Белевитина на этом трэш-сайте!
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

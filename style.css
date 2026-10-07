@@ -1,0 +1,171 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* убирает прокрутку, если картинка чуть больше экрана */
+}
+
+.Fon1{
+    width: 100%;
+    height: 1000px;
+    display: block;
+}
+
+.trash-text {
+    position: absolute;
+    top: 7%;   
+    left: 23%;       
+    transform: translate(-50%, -50%); 
+    
+    
+    color: #ffffff;   
+    font-size: 60px;  
+    font-family: "Impact", sans-serif; 
+    text-shadow: 5px 5px 0px #d60404; /
+    text-align: center;
+    margin: 0;
+}
+
+.trash-text2 {
+    position: absolute;
+    top: 25%;   
+    left: 23%;       
+    transform: translate(-50%, -50%); 
+    
+    
+    color: #c062e6;   
+    font-size: 60px;  
+    font-family: "Impact", sans-serif; 
+    text-shadow: 5px 5px 0px #3dad55; /
+    text-align: center;
+    margin: 0;
+}
+
+.trash-text3 {
+    position: absolute;
+    top: 43%;   
+    left: 23%;       
+    transform: translate(-50%, -50%); 
+    
+    
+    color: #27c222;   
+    font-size: 60px;  
+    font-family: "Impact", sans-serif; 
+    text-shadow: 5px 5px 0px #1904d6; /
+    text-align: center;
+    margin: 0;
+}
+
+.trash-text4 {
+    position: absolute;
+    top: 59%;   
+    left: 23%;       
+    transform: translate(-50%, -50%); 
+    
+    
+    color: #6add66;   
+    font-size: 60px;  
+    font-family: "Impact", sans-serif; 
+    text-shadow: 5px 5px 0px #3b1bc9; /
+    text-align: center;
+    margin: 0;
+}
+.trash-text5 {
+    position: absolute;
+    top: 69%;   
+    left: 23%;       
+    transform: translate(-50%, -50%); 
+    
+    
+    color: #223ac2;   
+    font-size: 60px;  
+    font-family: "Impact", sans-serif; 
+    text-shadow: 5px 5px 0px #cc7676; /
+    text-align: center;
+    margin: 0;
+}
+.trash-text6 {
+    position: absolute;
+    top: 77%;   
+    left: 23%;       
+    transform: translate(-50%, -50%); 
+    
+    
+    color: #27c222;   
+    font-size: 60px;  
+    font-family: "Impact", sans-serif; 
+    text-shadow: 5px 5px 0px #b62419; /
+    text-align: center;
+    margin: 0;
+}
+.gif-sidebar {
+    position: absolute;
+    top: 50px;       
+    right: 50px;     
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;      
+    z-index: 10;     
+}
+
+.gif-sidebar img {
+    width: 220px;    
+    height: auto;
+    border: 6px dashed #ff00ff; 
+    transition: transform 0.3s ease; 
+}
+
+
+.gif-sidebar img:hover {
+    transform: rotate(180deg) scale(1.3);
+}
+
+/* --- СКОПИРУЙ И ВСТАВЬ ЭТО В САМЫЙ КОНЕЦ СВОЕГО STYLE.CSS --- */
+
+/* Размещаем сетку 2x2 сверху, правее текста, на лбу Гомера */
+.center-grid {
+    position: absolute;
+    top: 25%; 
+    left: 55%; /* Двигаем вправо, чтобы не мешать твоему тексту */
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Делаем сетку 2 на 2 */
+    gap: 20px; /* Расстояние между картинками */
+    z-index: 5;
+}
+
+/* Ссылка, внутри которой текст и картинка */
+.grid-item {
+    display: flex;
+    flex-direction: column; /* Текст будет строго НАД картинкой */
+    align-items: center;
+    text-decoration: none; 
+    transition: transform 0.2s ease;
+}
+
+/* Трэш-эффект: при наведении картинка увеличивается и косится */
+.grid-item:hover {
+    transform: scale(1.1) rotate(3deg);
+}
+
+/* Текст над маленькими картинками */
+.grid-text {
+    font-family: "Impact", sans-serif;
+    font-size: 20px; 
+    margin-bottom: 5px; 
+    text-align: center;
+}
+
+/* Кислотные цвета для текстов над картинками */
+.text-color1 { color: #ffffff; text-shadow: 2px 2px 0 #d60404; }
+.text-color2 { color: #c062e6; text-shadow: 2px 2px 0 #3dad55; }
+.text-color3 { color: #27c222; text-shadow: 2px 2px 0 #1904d6; }
+.text-color4 { color: #ff00ff; text-shadow: 2px 2px 0 #00ffff; }
+
+/* Размеры самих картинок, чтобы они были мелкими */
+.grid-item img {
+    width: 130px; 
+    height: 90px; 
+    border: 3px solid #ffffff;
+}
