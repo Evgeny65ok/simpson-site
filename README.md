@@ -1,5 +1,4 @@
 # Simpson Site — CI/CD на GitHub Pages
-
 Индивидуальный проект: статический сайт про Симпсонов на HTML + CSS + JS с автоматическим деплоем на GitHub Pages через GitHub Actions.
 
 ## 🎯 Цель проекта
@@ -13,19 +12,22 @@
 ## 📸 Скриншоты
 
 ### 1. Открытый сайт на GitHub Pages
-![Site](site.png)
+<img width="1851" height="1021" alt="Снимок экрана 2026-10-07 125816" src="https://github.com/user-attachments/assets/e6858df8-e0a4-476a-ab2a-ef0fb89e787e" />
 
 ### 2. GitHub Actions — успешные деплои
-![Actions](actions.png)
+<img width="1798" height="858" alt="Снимок экрана 2026-10-07 130251" src="https://github.com/user-attachments/assets/3e15d49a-9a90-473a-b96f-f3456f952a77" />
+
 
 ### 3. Настройки Pages (Source: GitHub Actions)
-![Pages Settings](pages-settings.png)
+<img width="1511" height="971" alt="Снимок экрана 2026-10-07 125729" src="https://github.com/user-attachments/assets/cac34893-b345-4b76-bbb9-b50177467b72" />
+
 
 ### 4. История деплоев (Deployments)
-![Deployments](deployments.png)
+<img width="1794" height="931" alt="Снимок экрана 2026-10-07 130316" src="https://github.com/user-attachments/assets/2c05c89f-427a-447b-ad06-21b874cf1db3" />
+
 
 ### 5. About с ссылками
-![About](about.png)
+<img width="388" height="299" alt="image" src="https://github.com/user-attachments/assets/42696fe7-5b98-461c-8524-1b8ebb6df6aa" />
 
 ## 📄 Страницы сайта
 
